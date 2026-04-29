@@ -42,7 +42,7 @@ def direct_linear_transform(img_points: np.ndarray, obj_points: np.ndarray) -> t
     x = np.linalg.solve(A.T @ A, A.T @ f_vec).ravel()
 
     # helper variable
-    # The DLT scale is ambiguous (+/-). The sign below matches the rotation
+    # The DLT scale is ambiguous (+/-). The sign below matches the rotationa
     # convention used in the collinearity equations and in the unit tests.
     L = -1.0 / np.sqrt(x[8] ** 2 + x[9] ** 2 + x[10] ** 2)
 
